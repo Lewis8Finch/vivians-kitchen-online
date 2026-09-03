@@ -144,7 +144,7 @@ function Header() {
         </nav>
         <a
           href="tel:0704587546"
-          className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[13px] font-bold uppercase tracking-wide text-cream"
+          className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-[13px] font-bold uppercase tracking-wide text-cream shadow-md shadow-ink/20 transition-transform hover:-translate-y-0.5"
         >
           <span className="h-2 w-2 animate-pulse rounded-full bg-butter"></span>
           Call to order
@@ -159,7 +159,7 @@ function MobileOrderBar() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-ink bg-background/95 p-3 md:hidden">
       <a
         href="tel:0704587546"
-        className="flex items-center justify-center gap-3 bg-brand-accent py-4 text-base font-extrabold uppercase tracking-wide text-cream ring-1 ring-black/10"
+        className="flex items-center justify-center gap-3 rounded-full bg-brand-accent py-4 text-base font-extrabold uppercase tracking-wide text-cream shadow-lg shadow-brand-accent/30"
       >
         <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-cream"></span>
         Place an order · 0704 587546

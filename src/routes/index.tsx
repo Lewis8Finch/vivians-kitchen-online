@@ -55,7 +55,8 @@ function Index() {
       {/* Hero */}
       <section className="grid items-center gap-6 pb-10 pt-8 md:grid-cols-12 md:pt-12">
         <div className="relative order-2 md:order-1 md:col-span-7">
-          <div className="animate-rise relative aspect-[4/3] overflow-hidden rounded-2xl" style={{ animationDelay: "80ms" }}>
+          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(60%_60%_at_30%_20%,var(--color-butter)/45%,transparent),radial-gradient(50%_50%_at_80%_90%,var(--color-teal-brand)/25%,transparent)] blur-2xl"></div>
+          <div className="animate-rise relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl ring-1 ring-ink/10" style={{ animationDelay: "80ms" }}>
             <img
               src={heroPlatter}
               alt="Overhead shot of a hot Kenyan platter with nyama choma and githeri steaming on a banana leaf"
@@ -75,8 +76,8 @@ function Index() {
           <p className="animate-rise font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink" style={{ animationDelay: "0ms" }}>
             Ruaka · Takeaway & delivery
           </p>
-          <h1 className="animate-rise font-display text-[15vw] uppercase leading-[0.85] tracking-tight text-ink text-balance md:text-[6.5rem]" style={{ animationDelay: "90ms" }}>
-            Cooked <span className="text-brand-accent">like</span> you're family
+          <h1 className="animate-rise font-display text-[15vw] uppercase leading-[0.9] tracking-tight text-ink text-balance md:text-[6rem]" style={{ animationDelay: "90ms" }}>
+            Cooked <span className="bg-gradient-to-r from-brand-accent via-plum to-teal-brand bg-clip-text text-transparent">like</span> you're family
           </h1>
           <p className="animate-rise mt-5 max-w-[40ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
             Nyama choma, githeri and home-style plates from Gacharage Junction. Call ahead — we've got your order ready.
@@ -84,7 +85,7 @@ function Index() {
           <div className="animate-rise mt-6 flex flex-wrap gap-3" style={{ animationDelay: "270ms" }}>
             <a
               href="tel:0704587546"
-              className="group inline-flex items-center gap-3 bg-brand-accent px-5 py-3.5 text-sm font-extrabold uppercase tracking-wide text-cream"
+              className="group inline-flex items-center gap-3 rounded-full bg-brand-accent px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-cream shadow-lg shadow-brand-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/40"
             >
               <span className="h-2.5 w-2.5 rounded-full bg-cream transition-transform group-hover:rotate-90"></span>
               Place an order
@@ -92,7 +93,7 @@ function Index() {
             </a>
             <Link
               to="/menu"
-              className="inline-flex items-center border-2 border-ink px-4 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-cream"
+              className="inline-flex items-center rounded-full border-2 border-ink px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-cream"
             >
               See the menu
             </Link>
