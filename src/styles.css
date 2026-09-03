@@ -74,49 +74,49 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.95 0.02 80);
-  --foreground: oklch(0.25 0.04 50);
-  --card: oklch(0.97 0.015 85);
-  --card-foreground: oklch(0.25 0.04 50);
-  --popover: oklch(0.97 0.015 85);
-  --popover-foreground: oklch(0.25 0.04 50);
-  --primary: oklch(0.25 0.04 50);
-  --primary-foreground: oklch(0.97 0.015 85);
-  --secondary: oklch(0.95 0.02 80);
-  --secondary-foreground: oklch(0.25 0.04 50);
-  --muted: oklch(0.92 0.015 80);
-  --muted-foreground: oklch(0.52 0.04 65);
-  --accent: oklch(0.6 0.18 35);
-  --accent-foreground: oklch(0.97 0.015 85);
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.008 85);
+  --foreground: oklch(0.24 0.012 60);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.012 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.012 60);
+  --primary: oklch(0.53 0.15 38);
+  --primary-foreground: oklch(0.985 0.008 85);
+  --secondary: oklch(0.94 0.02 75);
+  --secondary-foreground: oklch(0.3 0.06 45);
+  --muted: oklch(0.95 0.012 80);
+  --muted-foreground: oklch(0.48 0.02 60);
+  --accent: oklch(0.8 0.16 82);
+  --accent-foreground: oklch(0.24 0.012 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.25 0.04 50 / 12%);
-  --input: oklch(0.25 0.04 50 / 12%);
-  --ring: oklch(0.6 0.18 35);
+  --border: oklch(0.9 0.015 75);
+  --input: oklch(0.9 0.015 75);
+  --ring: oklch(0.53 0.15 38);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.97 0.015 85);
-  --sidebar-foreground: oklch(0.25 0.04 50);
-  --sidebar-primary: oklch(0.25 0.04 50);
-  --sidebar-primary-foreground: oklch(0.97 0.015 85);
-  --sidebar-accent: oklch(0.95 0.02 80);
-  --sidebar-accent-foreground: oklch(0.25 0.04 50);
-  --sidebar-border: oklch(0.25 0.04 50 / 12%);
-  --sidebar-ring: oklch(0.6 0.18 35);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.24 0.012 60);
+  --sidebar-primary: oklch(0.53 0.15 38);
+  --sidebar-primary-foreground: oklch(0.985 0.008 85);
+  --sidebar-accent: oklch(0.95 0.012 80);
+  --sidebar-accent-foreground: oklch(0.24 0.012 60);
+  --sidebar-border: oklch(0.9 0.015 75);
+  --sidebar-ring: oklch(0.53 0.15 38);
 
-  /* Vivian's Kitchen brand tokens — rich professional mix */
-  --cream: oklch(0.975 0.012 90);
-  --ink: oklch(0.21 0.035 45);
-  --brand-muted: oklch(0.5 0.045 60);
-  --brand-accent: oklch(0.6 0.19 38);
-  --brand-accent-ink: oklch(0.48 0.19 38);
-  --olive: oklch(0.52 0.1 135);
-  --butter: oklch(0.82 0.15 88);
-  --teal-brand: oklch(0.55 0.1 195);
+  /* Vivian's Kitchen brand tokens */
+  --cream: oklch(0.985 0.008 85);
+  --ink: oklch(0.24 0.012 60);
+  --brand-muted: oklch(0.48 0.02 60);
+  --brand-accent: oklch(0.53 0.15 38);
+  --brand-accent-ink: oklch(0.46 0.15 38);
+  --olive: oklch(0.5 0.09 135);
+  --butter: oklch(0.82 0.16 84);
+  --teal-brand: oklch(0.53 0.09 195);
   --plum: oklch(0.42 0.09 320);
 }
 
@@ -160,9 +160,22 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Barlow", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0.01em;
   }
 }
 
@@ -221,8 +234,9 @@
 
 /* Font utilities */
 .font-display {
-  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: "Bebas Neue", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.01em;
+  font-weight: 400;
 }
 
 .font-mono-brand {

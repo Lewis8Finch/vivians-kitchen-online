@@ -24,7 +24,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center bg-ink px-4 py-2 text-sm font-medium text-cream transition-colors hover:bg-ink/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Go home
           </Link>
@@ -56,13 +56,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center bg-ink px-4 py-2 text-sm font-medium text-cream transition-colors hover:bg-ink/90"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center border-2 border-ink bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-ink hover:text-cream"
+            className="inline-flex items-center justify-center rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
           >
             Go home
           </a>
@@ -123,31 +123,35 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b-2 border-ink bg-background/95">
-      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5">
-        <Link to="/" className="font-display text-xl leading-none tracking-tight text-ink uppercase">
-          Vivian's <span className="text-brand-accent">Kitchen</span>
+    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+        <Link to="/" className="flex items-center gap-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary font-display text-xl leading-none text-primary-foreground">
+            V
+          </span>
+          <span className="font-display text-2xl leading-none tracking-wide text-foreground uppercase">
+            Vivian's Kitchen
+          </span>
         </Link>
-        <nav className="hidden items-center gap-7 text-[13px] font-semibold uppercase tracking-wide text-ink md:flex">
-          <Link to="/menu" activeProps={{ className: "text-brand-accent" }} className="transition-colors hover:text-brand-accent">
+        <nav className="hidden items-center gap-8 text-[13px] font-medium uppercase tracking-[0.16em] text-foreground/80 md:flex">
+          <Link to="/menu" activeProps={{ className: "text-primary" }} className="transition-colors hover:text-primary">
             Menu
           </Link>
-          <Link to="/reviews" activeProps={{ className: "text-brand-accent" }} className="transition-colors hover:text-brand-accent">
-            Reviews
-          </Link>
-          <Link to="/about" activeProps={{ className: "text-brand-accent" }} className="transition-colors hover:text-brand-accent">
+          <Link to="/about" activeProps={{ className: "text-primary" }} className="transition-colors hover:text-primary">
             About
           </Link>
-          <Link to="/contact" activeProps={{ className: "text-brand-accent" }} className="transition-colors hover:text-brand-accent">
+          <Link to="/reviews" activeProps={{ className: "text-primary" }} className="transition-colors hover:text-primary">
+            Reviews
+          </Link>
+          <Link to="/contact" activeProps={{ className: "text-primary" }} className="transition-colors hover:text-primary">
             Contact
           </Link>
         </nav>
         <a
           href="tel:0704587546"
-          className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-[13px] font-bold uppercase tracking-wide text-cream shadow-md shadow-ink/20 transition-transform hover:-translate-y-0.5"
+          className="hidden items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 sm:inline-flex"
         >
-          <span className="h-2 w-2 animate-pulse rounded-full bg-butter"></span>
-          Call to order
+          0704 587546
         </a>
       </div>
     </header>
@@ -156,13 +160,12 @@ function Header() {
 
 function MobileOrderBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-ink bg-background/95 p-3 md:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 p-3 backdrop-blur md:hidden">
       <a
         href="tel:0704587546"
-        className="flex items-center justify-center gap-3 rounded-full bg-brand-accent py-4 text-base font-extrabold uppercase tracking-wide text-cream shadow-lg shadow-brand-accent/30"
+        className="flex items-center justify-center gap-2 rounded-full bg-primary py-3.5 text-sm font-semibold text-primary-foreground shadow-md"
       >
-        <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-cream"></span>
-        Place an order · 0704 587546
+        Call to order · 0704 587546
       </a>
     </div>
   );
