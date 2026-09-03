@@ -25,197 +25,167 @@ export const Route = createFileRoute("/")({
 const menuItems = [
   {
     name: "Nyama Choma",
-    description: "Slow-roasted goat & beef, kachumbari, fresh ugali.",
+    price: "Ksh 900",
+    tag: "Popular",
+    category: "From the grill",
+    description: "Slow-roasted goat and beef served with kachumbari and fresh ugali.",
     image: menuNyamaChoma,
     alt: "Charred nyama choma skewers served on a banana leaf",
   },
   {
     name: "Githeri",
-    description: "Beans & maize, soft-cooked, onion & chilli.",
+    price: "Ksh 300",
+    tag: null,
+    category: "Local classics",
+    description: "Beans and maize slow-cooked soft with onion, tomato and a touch of chilli.",
     image: menuGitheri,
     alt: "Bowl of githeri beans and maize",
   },
   {
     name: "Chapati & Ndengu",
-    description: "Fluffy flatbread, peanut stew, fresh greens.",
+    price: "Ksh 350",
+    tag: "Popular",
+    category: "Everyday plates",
+    description: "Fluffy layered chapati with rich green-gram stew and fresh greens.",
     image: menuChapatiNdengu,
     alt: "Chapati with ndengu stew",
   },
   {
     name: "Grilled Tilapia",
-    description: "River fish, kachumbari, fries & lemon.",
+    price: "Ksh 850",
+    tag: null,
+    category: "From the lake",
+    description: "Whole tilapia grilled to order with kachumbari, fries and lemon.",
     image: menuTilapia,
     alt: "Grilled tilapia with kachumbari and chips",
   },
 ];
 
+const facts = [
+  { title: "Open daily", body: "Hot food served until 10 pm, seven days a week." },
+  { title: "Cooked to order", body: "Nothing sits under a lamp — every plate is made fresh." },
+  { title: "Easy to find", body: "Gacharage Junction on Red Hill Road, Ruaka." },
+  { title: "Fair prices", body: "Ksh 300–900 covers a full, satisfying meal." },
+];
+
 function Index() {
   return (
-    <main className="mx-auto max-w-6xl px-5 pb-24 md:pb-10">
+    <main className="pb-24 md:pb-0">
       {/* Hero */}
-      <section className="grid items-center gap-6 pb-10 pt-8 md:grid-cols-12 md:pt-12">
-        <div className="relative order-2 md:order-1 md:col-span-7">
-          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(60%_60%_at_30%_20%,var(--color-butter)/45%,transparent),radial-gradient(50%_50%_at_80%_90%,var(--color-teal-brand)/25%,transparent)] blur-2xl"></div>
-          <div className="animate-rise relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl ring-1 ring-ink/10" style={{ animationDelay: "80ms" }}>
-            <img
-              src={heroPlatter}
-              alt="Overhead shot of a hot Kenyan platter with nyama choma and githeri steaming on a banana leaf"
-              width={1200}
-              height={900}
-              className="h-full w-full object-cover"
-            />
-            <span className="steam-puff" style={{ left: "44%", top: "24%", animationDelay: "0s" }}></span>
-            <span className="steam-puff" style={{ left: "52%", top: "22%", animationDelay: "1.1s" }}></span>
-            <span className="steam-puff" style={{ left: "60%", top: "26%", animationDelay: "2.2s" }}></span>
-            <div className="absolute bottom-4 left-4 -rotate-6 bg-brand-accent px-4 py-2 text-[11px] font-bold uppercase tracking-[0.15em] text-cream">
-              Served hot
-            </div>
+      <section className="relative isolate flex min-h-[78vh] items-end overflow-hidden">
+        <img
+          src={heroPlatter}
+          alt="Overhead shot of a hot Kenyan platter with nyama choma and githeri steaming on a banana leaf"
+          width={1200}
+          height={900}
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-foreground via-foreground/70 to-foreground/30"></div>
+        <div className="mx-auto w-full max-w-6xl px-5 pb-14 pt-28">
+          <div className="inline-flex items-center gap-3 rounded-full bg-background/15 px-4 py-2 backdrop-blur">
+            <span className="text-sm tracking-widest text-accent">★★★★★</span>
+            <span className="text-sm font-medium text-background">5.0 from Google reviews</span>
           </div>
-        </div>
-        <div className="order-1 md:order-2 md:col-span-5">
-          <p className="animate-rise font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink" style={{ animationDelay: "0ms" }}>
-            Ruaka · Takeaway & delivery
-          </p>
-          <h1 className="animate-rise font-display text-[15vw] uppercase leading-[0.9] tracking-tight text-ink text-balance md:text-[6rem]" style={{ animationDelay: "90ms" }}>
-            Cooked <span className="bg-gradient-to-r from-brand-accent via-plum to-teal-brand bg-clip-text text-transparent">like</span> you're family
+          <h1 className="mt-6 max-w-3xl font-display text-5xl uppercase leading-[0.95] text-background text-balance md:text-7xl">
+            Ruaka's home-style <span className="text-accent">Kenyan kitchen</span> at Gacharage Junction
           </h1>
-          <p className="animate-rise mt-5 max-w-[40ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
-            Nyama choma, githeri and home-style plates from Gacharage Junction. Call ahead — we've got your order ready.
+          <p className="mt-5 max-w-xl leading-relaxed text-background/80 text-pretty">
+            Vivian's Kitchen cooks generous, honestly-priced local meals — nyama choma, githeri, chapati and fresh
+            tilapia. Order for takeaway or delivery, or call ahead and we'll have it ready.
           </p>
-          <div className="animate-rise mt-6 flex flex-wrap gap-3" style={{ animationDelay: "270ms" }}>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#menu"
+              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
+            >
+              View the menu
+            </a>
             <a
               href="tel:0704587546"
-              className="group inline-flex items-center gap-3 rounded-full bg-brand-accent px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-cream shadow-lg shadow-brand-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/40"
+              className="inline-flex items-center rounded-full border border-background/40 px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-background/10"
             >
-              <span className="h-2.5 w-2.5 rounded-full bg-cream transition-transform group-hover:rotate-90"></span>
-              Place an order
-              <span className="font-mono-brand font-normal normal-case">0704 587546</span>
+              Call 0704 587546
             </a>
-            <Link
-              to="/menu"
-              className="inline-flex items-center rounded-full border-2 border-ink px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-cream"
-            >
-              See the menu
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* Marquee */}
-      <div className="-rotate-1 scale-x-[1.02] overflow-hidden border-y-2 border-ink bg-brand-accent py-3 text-cream">
-        <div className="animate-marquee flex whitespace-nowrap font-display text-lg tracking-wide">
-          <span className="mx-6">Takeaway</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Delivery across Ruaka</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Open till 10pm</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Call to order</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Nyama Choma</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Githeri</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Takeaway</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Delivery across Ruaka</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Open till 10pm</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Call to order</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Nyama Choma</span>
-          <span className="mx-6 text-ink">✦</span>
-          <span className="mx-6">Githeri</span>
-          <span className="mx-6 text-ink">✦</span>
-        </div>
-      </div>
-
-      {/* Info bar */}
-      <section className="mt-10 grid grid-cols-3 gap-px border-2 border-ink bg-ink">
-        <div className="bg-background p-4">
-          <p className="font-mono-brand text-[10px] uppercase tracking-[0.2em] text-brand-muted">Hours</p>
-          <p className="mt-1 text-sm font-bold text-ink">Open · till 10pm</p>
-        </div>
-        <div className="bg-background p-4">
-          <p className="font-mono-brand text-[10px] uppercase tracking-[0.2em] text-brand-muted">Find us</p>
-          <p className="mt-1 text-sm font-bold text-ink">Gacharage Jct, Ruaka</p>
-        </div>
-        <div className="bg-background p-4">
-          <p className="font-mono-brand text-[10px] uppercase tracking-[0.2em] text-brand-muted">Call</p>
-          <a href="tel:0704587546" className="mt-1 inline-block text-sm font-bold text-ink hover:text-brand-accent">
-            0704 587546
-          </a>
-        </div>
-      </section>
-
-      {/* Menu highlights */}
-      <section id="menu" className="mt-16">
-        <div className="mb-6 flex items-end justify-between">
-          <div>
-            <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">Menu & highlights</p>
-            <h2 className="font-display mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h2>
-          </div>
-          <Link to="/menu" className="hidden text-xs font-bold uppercase tracking-wide text-ink border-b-2 border-brand-accent pb-0.5 sm:inline-block">
-            Full menu
-          </Link>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          {menuItems.map((item, i) => (
-            <article
-              key={item.name}
-              className="animate-rise flex items-start gap-4 border-2 border-ink bg-cream p-5"
-              style={{ animationDelay: `${i * 90}ms` }}
-            >
-              <img
-                src={item.image}
-                alt={item.alt}
-                width={96}
-                height={96}
-                loading="lazy"
-                className="h-24 w-24 shrink-0 rounded-lg object-cover"
-              />
-              <div className="min-w-0 flex-1">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="text-lg font-bold leading-tight text-ink">{item.name}</h3>
-                  <span className="font-mono-brand text-[11px] text-brand-accent-ink shrink-0">Sample</span>
-                </div>
-                <p className="mt-1 text-sm leading-snug text-brand-muted">{item.description}</p>
-              </div>
-            </article>
+      {/* Stat strip */}
+      <section className="border-b border-border bg-card">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-px px-5 py-6 sm:grid-cols-3">
+          {[
+            { label: "Open daily", value: "Until 10 pm" },
+            { label: "Avg. spend", value: "Ksh 300–900" },
+            { label: "Location", value: "Gacharage Jct, Ruaka" },
+          ].map((s) => (
+            <div key={s.label} className="py-2 sm:px-4">
+              <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{s.label}</p>
+              <p className="mt-1 text-lg font-semibold text-foreground">{s.value}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Reviews */}
-      <section id="reviews" className="relative mt-16 overflow-hidden rounded-2xl bg-ink p-6 text-cream md:p-10">
-        <span className="font-display absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
-        <div className="relative max-w-2xl">
-          <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-butter">What regulars say</p>
-          <h2 className="font-display mt-1 text-4xl uppercase tracking-tight md:text-5xl">Kept warm</h2>
-          <div className="mt-6 grid gap-5 sm:grid-cols-2">
-            <figure className="animate-rise rounded-xl border border-cream/15 bg-cream/5 p-5" style={{ animationDelay: "0ms" }}>
-              <div className="text-sm tracking-widest text-butter">★★★★★</div>
-              <blockquote className="mt-2 text-sm leading-relaxed text-cream/90">
-                "Simply amazing. Great taste, great customer service & delivery on time."
-              </blockquote>
-              <figcaption className="mt-3 font-mono-brand text-[11px] uppercase tracking-wide text-cream/50">Lilian Inyanji</figcaption>
-            </figure>
-            <figure className="animate-rise rounded-xl border border-cream/15 bg-cream/5 p-5" style={{ animationDelay: "120ms" }}>
-              <div className="text-sm tracking-widest text-butter">★★★★★</div>
-              <blockquote className="mt-2 text-sm leading-relaxed text-cream/90">
-                "Great food, excellent service. Order type — delivery."
-              </blockquote>
-              <figcaption className="mt-3 font-mono-brand text-[11px] uppercase tracking-wide text-cream/50">Hesbon Magara</figcaption>
-            </figure>
-          </div>
+      {/* Menu */}
+      <section id="menu" className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+        <p className="text-xs uppercase tracking-[0.2em] text-primary">Menu highlights</p>
+        <h2 className="mt-2 max-w-2xl font-display text-4xl uppercase leading-tight text-foreground md:text-5xl">
+          The plates our regulars keep coming back for
+        </h2>
+        <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground">
+          Cooked fresh to order, served fast, and priced for everyday eating. Most guests spend between{" "}
+          <strong className="font-semibold text-foreground">Ksh 300 and Ksh 900</strong> per person. Prices shown are
+          samples.
+        </p>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {menuItems.map((item) => (
+            <article
+              key={item.name}
+              className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                {item.tag && (
+                  <span className="absolute left-3 top-3 rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary-foreground">
+                    {item.tag}
+                  </span>
+                )}
+              </div>
+              <div className="p-5">
+                <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{item.category}</p>
+                <div className="mt-2 flex items-baseline justify-between gap-3">
+                  <h3 className="font-display text-2xl uppercase text-foreground">{item.name}</h3>
+                  <span className="shrink-0 font-semibold text-primary">{item.price}</span>
+                </div>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <Link
+            to="/menu"
+            className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            See the full menu
+          </Link>
+          <p className="text-sm text-muted-foreground">Vegetarian and lighter plates served all day.</p>
         </div>
       </section>
 
       {/* About */}
-      <section id="about" className="mt-16 grid items-center gap-6 md:grid-cols-12">
-        <div className="md:col-span-5">
-          <div className="animate-rise relative aspect-[4/5] overflow-hidden rounded-2xl" style={{ animationDelay: "0ms" }}>
+      <section id="about" className="border-y border-border bg-card">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:py-20">
+          <div className="overflow-hidden rounded-xl">
             <img
               src={aboutCook}
               alt="Warm portrait of Vivian in her kitchen apron with natural light"
@@ -225,41 +195,93 @@ function Index() {
               className="h-full w-full object-cover"
             />
           </div>
-        </div>
-        <div className="md:col-span-7">
-          <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">About</p>
-          <h2 className="animate-rise font-display mt-1 text-4xl uppercase leading-[0.9] tracking-tight text-ink md:text-5xl" style={{ animationDelay: "90ms" }}>
-            A kitchen that knows your name
-          </h2>
-          <p className="animate-rise mt-4 max-w-[52ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
-            Vivian's Kitchen is a small home-style cookery at Gacharage Junction in Ruaka. There's no rush here — just generous plates, honest food, and the people who keep coming back.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            <span className="border border-olive/30 bg-olive/15 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-olive">Home-style</span>
-            <span className="border border-brand-accent/30 bg-brand-accent/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-accent-ink">Takeaway & delivery</span>
-            <span className="border border-butter/40 bg-butter/20 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-ink">Ruaka local</span>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-primary">Our place in Ruaka</p>
+            <h2 className="mt-2 font-display text-4xl uppercase leading-tight text-foreground md:text-5xl">
+              A small kitchen that knows your name
+            </h2>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Vivian's Kitchen has fed the Gacharage Junction neighbourhood with home-style cooking — office workers
+              grabbing lunch, families ordering a grill platter, neighbours picking up dinner on the way home.
+            </p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">
+              We cook with fresh produce, keep the prices honest, and treat every guest like a regular. That's the whole
+              commitment.
+            </p>
+            <dl className="mt-8 grid gap-6 sm:grid-cols-2">
+              {facts.map((f) => (
+                <div key={f.title}>
+                  <dt className="font-display text-xl uppercase text-foreground">{f.title}</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-muted-foreground">{f.body}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contact" className="mt-16 border-t-2 border-ink pt-8">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="font-display text-3xl uppercase tracking-tight text-ink">
-              Vivian's <span className="text-brand-accent">Kitchen</span>
-            </p>
-            <p className="mt-2 text-sm text-brand-muted">Gacharage Junction, Red Hill Road, Ruaka · QQX6+6F</p>
+      {/* Reviews */}
+      <section id="reviews" className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+        <p className="text-xs uppercase tracking-[0.2em] text-primary">What diners say</p>
+        <div className="mt-2 flex flex-wrap items-end justify-between gap-6">
+          <h2 className="font-display text-4xl uppercase text-foreground md:text-5xl">Rated 5.0★ by our guests</h2>
+          <div className="flex items-center gap-3">
+            <span className="font-display text-5xl text-primary">5.0</span>
+            <span className="text-sm text-muted-foreground">2 Google reviews</span>
           </div>
-          <a
-            href="tel:0704587546"
-            className="group inline-flex items-center gap-3 bg-ink px-6 py-4 text-base font-extrabold uppercase tracking-wide text-cream"
-          >
-            <span className="h-3 w-3 rounded-full bg-butter transition-transform group-hover:rotate-90"></span>
-            Call 0704 587546
-          </a>
         </div>
-        <p className="mt-6 font-mono-brand text-[11px] text-brand-muted/80">© Vivian's Kitchen · Ruaka, Kenya · Menu prices shown are samples</p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          {[
+            { quote: "Simply amazing. Great taste, great customer service & delivery on time.", name: "Lilian Inyanji" },
+            { quote: "Great food, excellent service. Order type — delivery.", name: "Hesbon Magara" },
+          ].map((r) => (
+            <figure key={r.name} className="rounded-xl border border-border bg-card p-6 shadow-sm">
+              <div className="text-sm tracking-widest text-accent">★★★★★</div>
+              <blockquote className="mt-3 leading-relaxed text-foreground">"{r.quote}"</blockquote>
+              <figcaption className="mt-4 text-sm font-medium text-muted-foreground">{r.name}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact / footer */}
+      <footer id="contact" className="bg-foreground text-background">
+        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-2">
+          <div>
+            <p className="font-display text-3xl uppercase tracking-wide">Vivian's Kitchen</p>
+            <p className="mt-4 text-sm leading-relaxed text-background/70">
+              Gacharage Junction, Red Hill Road, Ruaka
+              <br />
+              Plus code QQX6+6F Ruaka
+            </p>
+            <p className="mt-4 text-sm text-background/70">Open daily · closes 10 pm</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="tel:0704587546"
+                className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Call 0704 587546
+              </a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Vivian%27s+Kitchen+Ruaka"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center rounded-full border border-background/30 px-6 py-3 text-sm font-semibold text-background transition-colors hover:bg-background/10"
+              >
+                Get directions
+              </a>
+            </div>
+          </div>
+          <nav className="grid grid-cols-2 gap-4 text-sm md:justify-items-end">
+            <Link to="/menu" className="text-background/70 transition-colors hover:text-background">Menu</Link>
+            <Link to="/about" className="text-background/70 transition-colors hover:text-background">About</Link>
+            <Link to="/reviews" className="text-background/70 transition-colors hover:text-background">Reviews</Link>
+            <Link to="/contact" className="text-background/70 transition-colors hover:text-background">Contact</Link>
+          </nav>
+        </div>
+        <div className="border-t border-background/10 py-6 text-center text-xs text-background/50">
+          © {new Date().getFullYear()} Vivian's Kitchen · Ruaka, Kenya · Menu prices shown are samples
+        </div>
       </footer>
     </main>
   );
