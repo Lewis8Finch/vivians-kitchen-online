@@ -23,7 +23,7 @@ function AboutPage() {
       <div className="mb-6 flex items-end justify-between">
         <div>
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">The kitchen</p>
-          <h1 className="font-anton mt-1 text-5xl uppercase leading-[0.9] tracking-tight text-ink md:text-6xl">
+          <h1 className="font-display mt-1 text-5xl uppercase leading-[0.9] tracking-tight text-ink md:text-6xl">
             A kitchen that knows your name
           </h1>
         </div>

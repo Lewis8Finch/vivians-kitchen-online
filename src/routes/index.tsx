@@ -55,7 +55,8 @@ function Index() {
       {/* Hero */}
       <section className="grid items-center gap-6 pb-10 pt-8 md:grid-cols-12 md:pt-12">
         <div className="relative order-2 md:order-1 md:col-span-7">
-          <div className="animate-rise relative aspect-[4/3] overflow-hidden rounded-2xl" style={{ animationDelay: "80ms" }}>
+          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-[radial-gradient(60%_60%_at_30%_20%,var(--color-butter)/45%,transparent),radial-gradient(50%_50%_at_80%_90%,var(--color-teal-brand)/25%,transparent)] blur-2xl"></div>
+          <div className="animate-rise relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl ring-1 ring-ink/10" style={{ animationDelay: "80ms" }}>
             <img
               src={heroPlatter}
               alt="Overhead shot of a hot Kenyan platter with nyama choma and githeri steaming on a banana leaf"
@@ -75,8 +76,8 @@ function Index() {
           <p className="animate-rise font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink" style={{ animationDelay: "0ms" }}>
             Ruaka · Takeaway & delivery
           </p>
-          <h1 className="animate-rise font-anton text-[15vw] uppercase leading-[0.85] tracking-tight text-ink text-balance md:text-[6.5rem]" style={{ animationDelay: "90ms" }}>
-            Cooked <span className="text-brand-accent">like</span> you're family
+          <h1 className="animate-rise font-display text-[15vw] uppercase leading-[0.9] tracking-tight text-ink text-balance md:text-[6rem]" style={{ animationDelay: "90ms" }}>
+            Cooked <span className="bg-gradient-to-r from-brand-accent via-plum to-teal-brand bg-clip-text text-transparent">like</span> you're family
           </h1>
           <p className="animate-rise mt-5 max-w-[40ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
             Nyama choma, githeri and home-style plates from Gacharage Junction. Call ahead — we've got your order ready.
@@ -84,7 +85,7 @@ function Index() {
           <div className="animate-rise mt-6 flex flex-wrap gap-3" style={{ animationDelay: "270ms" }}>
             <a
               href="tel:0704587546"
-              className="group inline-flex items-center gap-3 bg-brand-accent px-5 py-3.5 text-sm font-extrabold uppercase tracking-wide text-cream"
+              className="group inline-flex items-center gap-3 rounded-full bg-brand-accent px-6 py-3.5 text-sm font-extrabold uppercase tracking-wide text-cream shadow-lg shadow-brand-accent/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand-accent/40"
             >
               <span className="h-2.5 w-2.5 rounded-full bg-cream transition-transform group-hover:rotate-90"></span>
               Place an order
@@ -92,7 +93,7 @@ function Index() {
             </a>
             <Link
               to="/menu"
-              className="inline-flex items-center border-2 border-ink px-4 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-cream"
+              className="inline-flex items-center rounded-full border-2 border-ink px-5 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition-colors hover:bg-ink hover:text-cream"
             >
               See the menu
             </Link>
@@ -102,7 +103,7 @@ function Index() {
 
       {/* Marquee */}
       <div className="-rotate-1 scale-x-[1.02] overflow-hidden border-y-2 border-ink bg-brand-accent py-3 text-cream">
-        <div className="animate-marquee flex whitespace-nowrap font-anton text-lg tracking-wide">
+        <div className="animate-marquee flex whitespace-nowrap font-display text-lg tracking-wide">
           <span className="mx-6">Takeaway</span>
           <span className="mx-6 text-ink">✦</span>
           <span className="mx-6">Delivery across Ruaka</span>
@@ -153,7 +154,7 @@ function Index() {
         <div className="mb-6 flex items-end justify-between">
           <div>
             <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">Menu & highlights</p>
-            <h2 className="font-anton mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h2>
+            <h2 className="font-display mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h2>
           </div>
           <Link to="/menu" className="hidden text-xs font-bold uppercase tracking-wide text-ink border-b-2 border-brand-accent pb-0.5 sm:inline-block">
             Full menu
@@ -188,10 +189,10 @@ function Index() {
 
       {/* Reviews */}
       <section id="reviews" className="relative mt-16 overflow-hidden rounded-2xl bg-ink p-6 text-cream md:p-10">
-        <span className="font-anton absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
+        <span className="font-display absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
         <div className="relative max-w-2xl">
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-butter">What regulars say</p>
-          <h2 className="font-anton mt-1 text-4xl uppercase tracking-tight md:text-5xl">Kept warm</h2>
+          <h2 className="font-display mt-1 text-4xl uppercase tracking-tight md:text-5xl">Kept warm</h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             <figure className="animate-rise rounded-xl border border-cream/15 bg-cream/5 p-5" style={{ animationDelay: "0ms" }}>
               <div className="text-sm tracking-widest text-butter">★★★★★</div>
@@ -227,7 +228,7 @@ function Index() {
         </div>
         <div className="md:col-span-7">
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">About</p>
-          <h2 className="animate-rise font-anton mt-1 text-4xl uppercase leading-[0.9] tracking-tight text-ink md:text-5xl" style={{ animationDelay: "90ms" }}>
+          <h2 className="animate-rise font-display mt-1 text-4xl uppercase leading-[0.9] tracking-tight text-ink md:text-5xl" style={{ animationDelay: "90ms" }}>
             A kitchen that knows your name
           </h2>
           <p className="animate-rise mt-4 max-w-[52ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
@@ -245,7 +246,7 @@ function Index() {
       <footer id="contact" className="mt-16 border-t-2 border-ink pt-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="font-anton text-3xl uppercase tracking-tight text-ink">
+            <p className="font-display text-3xl uppercase tracking-tight text-ink">
               Vivian's <span className="text-brand-accent">Kitchen</span>
             </p>
             <p className="mt-2 text-sm text-brand-muted">Gacharage Junction, Red Hill Road, Ruaka · QQX6+6F</p>

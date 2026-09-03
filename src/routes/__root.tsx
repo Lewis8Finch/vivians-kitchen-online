@@ -16,7 +16,7 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="font-anton text-7xl font-bold text-foreground">404</h1>
+        <h1 className="font-display text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
@@ -97,7 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap",
       },
     ],
   }),
@@ -125,7 +125,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b-2 border-ink bg-background/95">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-5">
-        <Link to="/" className="font-anton text-xl leading-none tracking-tight text-ink uppercase">
+        <Link to="/" className="font-display text-xl leading-none tracking-tight text-ink uppercase">
           Vivian's <span className="text-brand-accent">Kitchen</span>
         </Link>
         <nav className="hidden items-center gap-7 text-[13px] font-semibold uppercase tracking-wide text-ink md:flex">
@@ -144,7 +144,7 @@ function Header() {
         </nav>
         <a
           href="tel:0704587546"
-          className="inline-flex items-center gap-2 bg-ink px-4 py-2 text-[13px] font-bold uppercase tracking-wide text-cream"
+          className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-[13px] font-bold uppercase tracking-wide text-cream shadow-md shadow-ink/20 transition-transform hover:-translate-y-0.5"
         >
           <span className="h-2 w-2 animate-pulse rounded-full bg-butter"></span>
           Call to order
@@ -159,7 +159,7 @@ function MobileOrderBar() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-ink bg-background/95 p-3 md:hidden">
       <a
         href="tel:0704587546"
-        className="flex items-center justify-center gap-3 bg-brand-accent py-4 text-base font-extrabold uppercase tracking-wide text-cream ring-1 ring-black/10"
+        className="flex items-center justify-center gap-3 rounded-full bg-brand-accent py-4 text-base font-extrabold uppercase tracking-wide text-cream shadow-lg shadow-brand-accent/30"
       >
         <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-cream"></span>
         Place an order · 0704 587546

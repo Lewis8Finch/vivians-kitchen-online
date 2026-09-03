@@ -36,7 +36,7 @@ function ReviewsPage() {
       <div className="mb-6 flex items-end justify-between">
         <div>
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">What regulars say</p>
-          <h1 className="font-anton mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">Kept warm</h1>
+          <h1 className="font-display mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">Kept warm</h1>
         </div>
         <Link to="/" className="hidden text-xs font-bold uppercase tracking-wide text-ink border-b-2 border-brand-accent pb-0.5 sm:inline-block">
           Back home
@@ -44,7 +44,7 @@ function ReviewsPage() {
       </div>
 
       <div className="relative overflow-hidden rounded-2xl bg-ink p-6 text-cream md:p-10">
-        <span className="font-anton absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
+        <span className="font-display absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
         <div className="relative">
           <div className="flex items-center gap-3">
             <span className="bg-butter px-3 py-1 text-lg font-bold text-ink">5.0</span>
