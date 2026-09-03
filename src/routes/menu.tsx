@@ -57,7 +57,7 @@ function MenuPage() {
       <div className="mb-6 flex items-end justify-between">
         <div>
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">Menu & highlights</p>
-          <h1 className="font-anton mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h1>
+          <h1 className="font-display mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h1>
         </div>
         <Link to="/" className="hidden text-xs font-bold uppercase tracking-wide text-ink border-b-2 border-brand-accent pb-0.5 sm:inline-block">
           Back home

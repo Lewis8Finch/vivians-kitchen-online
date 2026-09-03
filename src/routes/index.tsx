@@ -75,7 +75,7 @@ function Index() {
           <p className="animate-rise font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink" style={{ animationDelay: "0ms" }}>
             Ruaka · Takeaway & delivery
           </p>
-          <h1 className="animate-rise font-anton text-[15vw] uppercase leading-[0.85] tracking-tight text-ink text-balance md:text-[6.5rem]" style={{ animationDelay: "90ms" }}>
+          <h1 className="animate-rise font-display text-[15vw] uppercase leading-[0.85] tracking-tight text-ink text-balance md:text-[6.5rem]" style={{ animationDelay: "90ms" }}>
             Cooked <span className="text-brand-accent">like</span> you're family
           </h1>
           <p className="animate-rise mt-5 max-w-[40ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
@@ -102,7 +102,7 @@ function Index() {
 
       {/* Marquee */}
       <div className="-rotate-1 scale-x-[1.02] overflow-hidden border-y-2 border-ink bg-brand-accent py-3 text-cream">
-        <div className="animate-marquee flex whitespace-nowrap font-anton text-lg tracking-wide">
+        <div className="animate-marquee flex whitespace-nowrap font-display text-lg tracking-wide">
           <span className="mx-6">Takeaway</span>
           <span className="mx-6 text-ink">✦</span>
           <span className="mx-6">Delivery across Ruaka</span>
@@ -153,7 +153,7 @@ function Index() {
         <div className="mb-6 flex items-end justify-between">
           <div>
             <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">Menu & highlights</p>
-            <h2 className="font-anton mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h2>
+            <h2 className="font-display mt-1 text-5xl uppercase tracking-tight text-ink md:text-6xl">On the menu</h2>
           </div>
           <Link to="/menu" className="hidden text-xs font-bold uppercase tracking-wide text-ink border-b-2 border-brand-accent pb-0.5 sm:inline-block">
             Full menu
@@ -188,10 +188,10 @@ function Index() {
 
       {/* Reviews */}
       <section id="reviews" className="relative mt-16 overflow-hidden rounded-2xl bg-ink p-6 text-cream md:p-10">
-        <span className="font-anton absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
+        <span className="font-display absolute -right-6 -top-8 text-[9rem] leading-none select-none text-ink opacity-10">5.0</span>
         <div className="relative max-w-2xl">
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-butter">What regulars say</p>
-          <h2 className="font-anton mt-1 text-4xl uppercase tracking-tight md:text-5xl">Kept warm</h2>
+          <h2 className="font-display mt-1 text-4xl uppercase tracking-tight md:text-5xl">Kept warm</h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
             <figure className="animate-rise rounded-xl border border-cream/15 bg-cream/5 p-5" style={{ animationDelay: "0ms" }}>
               <div className="text-sm tracking-widest text-butter">★★★★★</div>
@@ -227,7 +227,7 @@ function Index() {
         </div>
         <div className="md:col-span-7">
           <p className="font-mono-brand text-[11px] uppercase tracking-[0.22em] text-brand-accent-ink">About</p>
-          <h2 className="animate-rise font-anton mt-1 text-4xl uppercase leading-[0.9] tracking-tight text-ink md:text-5xl" style={{ animationDelay: "90ms" }}>
+          <h2 className="animate-rise font-display mt-1 text-4xl uppercase leading-[0.9] tracking-tight text-ink md:text-5xl" style={{ animationDelay: "90ms" }}>
             A kitchen that knows your name
           </h2>
           <p className="animate-rise mt-4 max-w-[52ch] leading-relaxed text-ink/80 text-pretty" style={{ animationDelay: "180ms" }}>
@@ -245,7 +245,7 @@ function Index() {
       <footer id="contact" className="mt-16 border-t-2 border-ink pt-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <p className="font-anton text-3xl uppercase tracking-tight text-ink">
+            <p className="font-display text-3xl uppercase tracking-tight text-ink">
               Vivian's <span className="text-brand-accent">Kitchen</span>
             </p>
             <p className="mt-2 text-sm text-brand-muted">Gacharage Junction, Red Hill Road, Ruaka · QQX6+6F</p>
